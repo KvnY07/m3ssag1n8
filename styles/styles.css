@@ -1,0 +1,409 @@
+/* This file should contain global styles */
+h1 {
+  text-align: center;
+  color: black;
+}
+
+#welcome-message {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: rgb(65, 2, 103);
+  font-size: xx-large; /* Larger size for the welcome message */
+  text-align: center;
+
+  /* Centering styles */
+  position: absolute;
+  top: 52%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+
+.main-content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2px;
+  flex-wrap: wrap;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: rgb(227, 222, 243);
+  overflow: hidden;
+}
+
+.ribbon {
+  width: 100%;
+  height: clamp(5px, 1vw, 12px);
+  background-color: #5350b4;
+  margin-top: clamp(10px, 2vh, 20px);
+  margin-bottom: 0;
+  position: relative;
+}
+
+/* Header styling */
+.header {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 0;
+  padding-top: 10px;
+}
+
+.workspace-buttons-container {
+  position: absolute;
+  top: 15px;
+  left: clamp(10px, 3vw, 20px);
+  display: flex;
+  gap: clamp(5px, 1vw, 10px);
+}
+
+.create-workspace-btn {
+  font-size: clamp(0.7rem, 1.5vw, 1rem);
+  padding: clamp(8px, 1.3vw, 12px) clamp(8px, 1.5vw, 12px);
+  background-color: #221f74;
+  color: white;
+  border-color: #221f74;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.create-workspace-btn:hover {
+  background-color: #0a04b8;
+}
+
+.user-info-container {
+  position: absolute;
+  top: 13px;
+  right: clamp(10px, 3vw, 20px);
+  display: flex;
+  gap: clamp(5px, 1vw, 10px);
+}
+
+.owl-icon {
+  display: flex;
+  align-items: center;
+  margin-right: 7px;
+  color: #221f74;
+  font-size: clamp(2rem, 3vw, 4.5rem);
+  stroke-width: 4%;
+  transform: scale(1.1) translateY(-35px); /* Moves the owl icon higher */
+}
+
+/* Logout Button styling */
+.logout-btn {
+  margin-right: 7px;
+  margin-top: 3px;
+  font-size: clamp(0.7rem, 1.5vw, 1rem);
+  padding: clamp(2px, 0.3vw, 4px) clamp(6px, 1vw, 10px);
+  background-color: #78736b;
+  color: white;
+  border-radius: 4px;
+  border-color: #000000;
+  cursor: pointer;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  transition: all 0.3s ease;
+  height: 45px;
+  line-height: normal;
+}
+
+.logout-btn:hover {
+  background-color: #524f4b;
+}
+
+/* Username Display styling */
+.username-display {
+  font-size: clamp(0.7rem, 1.5vw, 1rem);
+  color: #333;
+}
+
+.vertical-divider {
+  position: absolute;
+  top: 77px;
+  bottom: 0;
+  left: 280px;
+  width: 2px;
+  background-color: #5350b4;
+}
+
+.create-channel-btn {
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  left: 66px;
+  font-size: 16px;
+  padding: 8px 12px;
+  background-color: #221f74;
+  color: white;
+  border-color: #221f74;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  width: fit-content;
+}
+
+.create-channel-btn:hover {
+  background-color: #0a04b8;
+}
+
+.header-container {
+  display: block;
+}
+
+body.login-background-active .header-container {
+  display: none;
+}
+
+.login-container {
+  background-color: rgb(227, 222, 243);
+  width: 100%;
+}
+
+#create-workspace-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white; /* Matches your color scheme */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  z-index: 1000; /* Ensures it appears above other elements */
+}
+
+#create-workspace-dialog h3 {
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 15px;
+  /* font-size: 16px; */
+}
+
+#create-workspace-dialog input#workspace-name {
+  width: 80%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid rgb(174, 164, 164);
+  font-family: bold;
+  margin-bottom: 15px;
+  color: rgb(9, 9, 9);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 16px;
+}
+
+#create-workspace-dialog button#submit-workspace-btn {
+  background-color: #5350b4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  width: 86%;
+  margin-bottom: 15px;
+}
+
+#create-workspace-dialog button#submit-workspace-btn:hover {
+  background-color: #312e88;
+}
+
+#create-workspace-dialog button#close-dialog-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  color: rgb(166, 164, 164);
+}
+
+#create-workspace-dialog button#close-dialog-btn:hover {
+  color: black;
+}
+
+#create-channel-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white; /* Matches your color scheme */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  z-index: 1000; /* Ensures it appears above other elements */
+}
+
+#create-channel-dialog h3 {
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 15px;
+  /* font-size: 16px; */
+}
+
+#create-channel-dialog input#channel-name {
+  width: 80%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid rgb(174, 164, 164);
+  font-family: bold;
+  margin-bottom: 15px;
+  color: rgb(9, 9, 9);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 16px;
+}
+
+#create-channel-dialog button#submit-channel-btn {
+  background-color: #5350b4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  width: 86%;
+  margin-bottom: 15px;
+}
+
+#create-channel-dialog button#submit-channel-btn:hover {
+  background-color: #312e88;
+}
+
+#create-channel-dialog button#close-dialog-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  color: rgb(166, 164, 164);
+}
+
+#create-channel-dialog button#close-dialog-btn:hover {
+  color: black;
+}
+
+/* creating icon container for posts */
+.icon-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+  justify-content: flex-end;
+}
+
+/* Overlay styling to freeze background functionality */
+.overlay-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 900;
+  display: none;
+}
+
+/* Ensure the overlay is visible when the dialog is active */
+.overlay-backdrop.active {
+  display: block;
+}
+
+/* Backdrop to block interaction with the rest of the website */
+#overlay-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Slightly darker backdrop for better focus on the dialog */
+  z-index: 999; /* Sits behind the dialog but above all other content */
+  display: none; /* Hidden by default */
+  pointer-events: none; /* Prevent interaction unless active */
+}
+
+#overlay-backdrop.active {
+  display: block;
+  pointer-events: all;
+}
+
+/* Styling for the logout confirmation dialog */
+#logout-confirmation-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+  width: 320px;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  z-index: 1000; /* Above the backdrop */
+  display: none; /* Hidden by default */
+}
+
+/* Content styling inside the dialog */
+#logout-confirmation-dialog .dialog-content {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* Dialog title styling */
+#logout-confirmation-dialog h2 {
+  color: #180654;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+}
+
+/* Styling for buttons */
+#logout-confirmation-dialog button {
+  background-color: #5350b4;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 10px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+#logout-confirmation-dialog button:hover {
+  background-color: #312e88;
+}
+
+/* Cancel button styling */
+#logout-confirmation-dialog button#cancel-logout-btn {
+  background-color: #78736b;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#logout-confirmation-dialog button#cancel-logout-btn:hover {
+  background-color: #524f4b;
+}
+
+#overlay-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  display: none;
+}
